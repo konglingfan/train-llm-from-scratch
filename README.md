@@ -80,18 +80,35 @@ Make sure you have a basic understanding of object-oriented programming (OOP), n
 
 You will need a GPU to train your model. Colab or Kaggle T4 will work for training a 13+ million-parameter model, but they will fail for billion-parameter training. Take a look at the comparison:
 
-| GPU Name              | Memory  | Data Size  | 2B LLM Training | 13M LLM Training |
-|-----------------------|---------|------------|------------------|------------------|
-| NVIDIA A100           | 40 GB   | Large      | ✔                | ✔                |
-| NVIDIA V100           | 16 GB   | Medium     | ✘                | ✔                |
-| AMD Radeon VII        | 16 GB   | Medium     | ✘                | ✔                |
-| NVIDIA RTX 3090       | 24 GB   | Large      | ✔                | ✔                |
-| Tesla P100            | 16 GB   | Medium     | ✘                | ✔                |
-| NVIDIA RTX 3080       | 10 GB   | Medium     | ✘                | ✔                |
-| AMD Radeon RX 6900 XT | 16 GB   | Large      | ✘                | ✔                |
-| NVIDIA GTX 1080 Ti    | 11 GB   | Medium     | ✘                | ✔                |
-| Tesla T4              | 16 GB   | Small      | ✘                | ✔                |
-| NVIDIA Quadro RTX 8000| 48 GB   | Large      | ✔                | ✔                |
+| GPU Name                 | Memory | Data Size | 2B LLM Training | 13M LLM Training | Max Practical LLM Size (Training) |
+|--------------------------|--------|-----------|-----------------|------------------|-----------------------------------|
+| NVIDIA A100              | 40 GB  | Large     | ✔               | ✔                | ~6B–8B                             |
+| NVIDIA V100              | 16 GB  | Medium    | ✘               | ✔                | ~2B                               |
+| AMD Radeon VII           | 16 GB  | Medium    | ✘               | ✔                | ~1.5B–2B                          |
+| NVIDIA RTX 3090          | 24 GB  | Large     | ✔               | ✔                | ~3.5B–4B                          |
+| Tesla P100               | 16 GB  | Medium    | ✘               | ✔                | ~1.5B–2B                          |
+| NVIDIA RTX 3080          | 10 GB  | Medium    | ✘               | ✔                | ~1.2B                             |
+| AMD RX 6900 XT           | 16 GB  | Large     | ✘               | ✔                | ~2B                               |
+| NVIDIA GTX 1080 Ti       | 11 GB  | Medium    | ✘               | ✔                | ~1.2B                             |
+| Tesla T4                 | 16 GB  | Small     | ✘               | ✔                | ~1.5B–2B                          |
+| NVIDIA Quadro RTX 8000   | 48 GB  | Large     | ✔               | ✔                | ~8B–10B                           |
+| NVIDIA RTX 4070          | 12 GB  | Medium    | ✘               | ✔                | ~1.5B                             |
+| NVIDIA RTX 4070 Ti       | 12 GB  | Medium    | ✘               | ✔                | ~1.5B                             |
+| NVIDIA RTX 4080          | 16 GB  | Medium    | ✘               | ✔                | ~2B                               |
+| NVIDIA RTX 4090          | 24 GB  | Large     | ✔               | ✔                | ~4B                               |
+| NVIDIA RTX 4060 Ti       | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
+| NVIDIA RTX 4060          | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
+| NVIDIA RTX 4050          | 6 GB   | Small     | ✘               | ✔                | ~0.75B                            |
+| NVIDIA RTX 3070          | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
+| NVIDIA RTX 3060 Ti       | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
+| NVIDIA RTX 3060          | 12 GB  | Medium    | ✘               | ✔                | ~1.5B                             |
+| NVIDIA RTX 3050          | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
+| NVIDIA GTX 1660 Ti       | 6 GB   | Small     | ✘               | ✔                | ~0.75B                            |
+| AMD RX 7900 XTX          | 24 GB  | Large     | ✔               | ✔                | ~3.5B–4B                          |
+| AMD RX 7900 XT           | 20 GB  | Large     | ✔               | ✔                | ~3B                               |
+| AMD RX 7800 XT           | 16 GB  | Medium    | ✘               | ✔                | ~2B                               |
+| AMD RX 7700 XT           | 12 GB  | Medium    | ✘               | ✔                | ~1.5B                             |
+| AMD RX 7600              | 8 GB   | Small     | ✘               | ✔                | ~1B                               |
 
 The 13M LLM training is the training of a 13+ million-parameter model, and the 2B LLM training is the training of a 2+ billion-parameter model. The data size is categorized as small, medium, and large. The small data size is around 1 GB, the medium data size is around 5 GB, and the large data size is around 10 GB.
 
